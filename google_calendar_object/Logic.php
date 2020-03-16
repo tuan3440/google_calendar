@@ -1,8 +1,8 @@
 <?php
 
       class Logic {
+          
         private $presenter;
-
         function __construct(Presenter $presenter) {
                $this->presenter = $presenter;
         }
@@ -20,11 +20,9 @@
         
         function printCalendarContents() {
            
-            global $client;
-            $this->presenter->putCalendarListTitle();
-           
-            foreach ($this->retrieveEvents($_GET['showThisCalendar']) as $event) {
-                
+            // global $client;
+            $this->presenter->putCalendarListTitle();  
+            foreach ($this->retrieveEvents($_GET['showThisCalendar']) as $event) { 
                 $this->presenter->putEventListElement($event);
             }
         }
@@ -32,7 +30,7 @@
         
         
         function printEventDetails() {
-            global $client;
+            // global $client;
             foreach ($this->retrieveEvents($_GET['calendarId']) as $event)
                 if ($this->isCurrentEvent($event)) {
                     $this->presenter->putEvents($event);

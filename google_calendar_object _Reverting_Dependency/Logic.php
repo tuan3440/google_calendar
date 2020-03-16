@@ -6,19 +6,18 @@
       class Logic {
    
            private $client;
-
            function __construct($client) {
                $this->client = $client;
+
            }
         
 
-
-       function getCalendars(){
+       function getCalendars() {
           
            return getCalendarList($this->client)['items'];
        }
 
-       function getEventsForCalendar($calendarId){
+       function getEventsForCalendar($calendarId) {
            
            return getEventList($this->client, $calendarId)['items'];
        }

@@ -33,7 +33,7 @@
         }
         
         
-        
+    
         function printEventDetails() {
             $this->putEvent(
                 $this->businessLogic->getEventById(

@@ -15,7 +15,6 @@ require_once './Presenter.php';
 
 require_once './Router.php';
 
-
 session_start();
  
 $client = createClient();
